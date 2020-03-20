@@ -16,20 +16,21 @@ public class BinaryConverter implements ActionListener {
 	
 	String text;
 	
-	JTextField answer = new JTextField(20);
+	JTextField binaryInput = new JTextField(20);
 	JLabel output = new JLabel();
 	
 	public void showButton() {
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		text = JOptionPane.showInputDialog(""); 
-		answer.setText(text);
-		frame.add(answer);
-		frame.pack();
+		panel.add(binaryInput);
 		
 		JButton button = new JButton("convert");
-		frame.add(button);
+		panel.add(button);
+		
+		panel.add(output);
+		
+		frame.add(panel);
 		frame.pack();
 		button.addActionListener(this);
 		
@@ -38,7 +39,9 @@ public class BinaryConverter implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		convert(text);
+		output.setText(convert(binaryInput.getText()));
+		frame.pack();
+		frame.repaint();
 	}
 	
 	String convert(String input) {
