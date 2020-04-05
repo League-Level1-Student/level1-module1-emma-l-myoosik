@@ -15,12 +15,12 @@ public class PopcornMaker {
 		
 		microwave.putInMicrowave(popcorn);
 		
-		Scanner setTimer = new Scanner(System.in);
-		System.out.print("Set time: ");	
-		String i = setTimer.next();
-		int time = Integer.parseInt(i);
-		setTimer.close();
-		microwave.setTime(time);
+		// Scanner setTimer = new Scanner(System.in);
+		// System.out.print("Set time: ");	
+		//String i = setTimer.next();
+		// int time = Integer.parseInt(i);
+		// setTimer.close();
+		// microwave.setTime(time);
 		microwave.startMicrowave();
 		
 		popcorn.applyHeat();
